@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./output.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="min-h-screen font-space_grotesk">
+  <div class="absolute px-4 w-full py-9">
+
+    <div class="relative"> 
+
+      <div class="card_back ps-12 relative lg:pt-[26.7rem] lg:ps-52">
+        <img src="./images/bg-card-back.png" alt="" class="">
+        <p class="absolute top-[4.4rem] text-[12px] right-9 text-white lg:right-[41.5rem] lg:top-[33.5rem] lg:text-[16px]" id="card_cvc">000</p>
+      </div>
+
+      <div class="card_front absolute top-[5.7rem] pe-12 lg:ps-32 lg:pt-14 ">
+        <div class="relative w-full">
+
+          <img src="./images/bg-card-front.png" alt="" class="">
+
+          <div class="absolute top-0 p-5 w-full lg:p-8">
+            <img src="./images/card-logo.svg" alt="" class="w-14 mb-9 lg:w-20 lg:mb-14">
+              <p class="card_no w-full mb-3 text-white text-[1.3rem] tracking-[1.1px] lg:text-[1.9rem] lg:tracking-[1.8px] lg:font-extralight lg:mb-6">0000 0000 0000 0000</p>
+              <div class="flex gap-4 justify-between">
+                <p id="card_name" class="text-[10.5px] text-white lg:text-[12px] tracking-[2px]">JANE APPLESEED</p>
+                <p class="text-white text-[10.5px] lg:text-[12px] tracking-[2px]"><span id="card_month">09</span>/<span id="card_year">00</span></p>
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+  
+    </div>
+    
+  </div>
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+<div class="w-full lg:flex ">
+
+  <div class="w-full">
+    <img src="./images/bg-main-mobile.png" alt="" class="relative -z-10 top-0 lg:hidden">
+    <img src="./images/bg-main-desktop.png" alt="" class="relative -z-10 top-0 hidden lg:block">
+  </div>
+
+  <div class="pt-24 w-full px-5 lg:ps-52 lg:pe-28 z-20">
+
+    <form action="/" class="w-full lg:pt-[45%] lg:max-w-[380px] overflow-visible">
+
+      <h1 class="uppercase text-sm tracking-[.1rem] mb-1.5">Cardholder Name</h1>
+
+      <input type="text" id="name" class="py-2.5 border w-full mb-1.5 ps-3 rounded-lg " placeholder="e.g. Jane Appleseed" data-type="input">
+
+      <h1 class="uppercase text-sm tracking-[.1rem] mb-1.5">Card Number</h1>
+
+      <input type="text" placeholder="e.g. 1234 5678 9123 0000" class="py-2.5 border w-full mb-1.5 ps-3 rounded-lg" id="card-num" data-type="input">
+
+      <div class="flex gap-2.5 mb-3">
+
+        <article class="">
+          <h1 class="uppercase text-sm tracking-[.1rem] mb-1.5  ">Exp. Date (MM/YY)</h1>
+          <div class="flex gap-2.5">
+            <input type="text" placeholder="MM" class="py-2.5 border mb-4 w-20 ps-3 rounded-lg" id="month" data-type="input">
+            <input type="text" placeholder="YY" class="py-2.5 border mb-4 w-20 ps-3 rounded-lg" id="year" data-type="input">
+          </div>
+          
+        </article>
+
+        <article class="w-full">
+          <h1 class="uppercase text-sm tracking-[.1rem] mb-1.5"> CVC</h1>
+          <input type="text" placeholder="e.g. 123" class="py-2.5 border w-full mb-4 ps-3 rounded-lg" id="cvc_" data-type="input">
+        </article>
+      </div>
+
+      <input type="submit" value="Confirm" class="py-3 w-full bg-Very_dark_violet rounded-lg text-white mb-6" id="submit">
+    </form>
+  </div>
+</div>
+
+ 
+
+</body>
+</html>
